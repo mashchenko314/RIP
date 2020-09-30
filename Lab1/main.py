@@ -34,22 +34,24 @@ elif a != 0:
         print('Уравнение не имеет решений')
         exit()
     else:
-        x1 = (-b + sqrt(discriminant) / (2 * a))
-        x2 = (-b - sqrt(discriminant) / (2 * a))
+        x1 = (-b + sqrt(discriminant)) / (2 * a)
+        x2 = (-b - sqrt(discriminant)) / (2 * a)
         if x1 >= 0 or x2 >= 0:
             print('Уравнение имеет решение')
         else:
             print('Уравнение не имеет решений')
             exit()
 
-    if x1 >= 0:
+    if x1 > 0:
         x11 = sqrt(x1)
         x12 = -sqrt(x1)
         print(x11 ,x12)
-    if x2 >= 0:
+    if x2 > 0:
         x21 = sqrt(x2)
         x22 = -sqrt(x2)
         print(x21, x22)
+    if x1==0 or x2==0:
+        print(0)
 else:
     try:
         x1 = sqrt(-c/b)
